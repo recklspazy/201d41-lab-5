@@ -50,6 +50,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  return [a+b+c, ' The sum of ' + a + ' and ' + b + ' multiplied by ' + c + ' is ' + (a+b*c) + '.'];
 
 }
 
