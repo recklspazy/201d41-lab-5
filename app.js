@@ -55,7 +55,6 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   return [sum(sum(a,b)[0],c)[0], multiply(multiply(a,b)[0], c)[0], a+ ' and ' +b+ ' and ' +c+ ' sum to ' + sum(sum(a,b)[0],c)[0] + '.', 'The product of ' +a+ ' and ' +b+ ' and ' +c+ ' is ' + multiply(multiply(a,b)[0],c)[0] + '.'];
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -74,17 +73,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-//var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4];
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr) { //eslint-disable-lineß
   var testArray = [2,3,4];
-  return [testArray[0], testArray [1], testArray [2],' were numbers in array. so ' + testArray[0] + ' and ' + testArray[1] + ' and ' + testArray[2] + ' is ' +
-  (testArray[0] + testArray[1] + testArray[2]) +'.'];
+  //console.log(testArray);
+  return [sum(sum(testArray[0], testArray[1])[0], testArray[2])[0], testArray.toString()+' was passed in as an array of numbers,' + ' and '+ sum(sum(testArray[0], testArray[1])[0], testArray[2])[0] +' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -100,11 +99,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var testArray = [2,3,4];
+  //console.log(testArray,'testarray');
+  return [multiply(multiply(testArray[0],testArray[1])[0], testArray[2])[0],'The numbers ' + testArray.toString() + ' have a product of ' + multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0] +'.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
+//console.log(multiplyArray)
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -125,11 +127,11 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+// var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
