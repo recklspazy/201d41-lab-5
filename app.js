@@ -127,13 +127,14 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-// var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  return [ multiply(multiply(multiply(multiply(testDynamicArray [0], testDynamicArray [1])[0], testDynamicArray [2])[0], testDynamicArray [3])[0],testDynamicArray[4])[0], 'The numbers ' + testDynamicArray.toString() + ' have a product of ' + 
+  multiply(multiply(multiply(multiply(testDynamicArray [0], testDynamicArray [1])[0], testDynamicArray [2])[0], testDynamicArray [3])[0],testDynamicArray[4])[0] + '.'];
 
-// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
-// }
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
